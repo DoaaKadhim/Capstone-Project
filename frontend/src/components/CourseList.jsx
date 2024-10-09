@@ -29,6 +29,8 @@ const CourseList = () => {
           </li>
         ))}
       </ul>
+      <Link to="/home">Back to Home</Link>
+
     </div>
   );
 };

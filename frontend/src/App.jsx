@@ -38,7 +38,6 @@
 // export default App;
 /////////////
 //new
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
@@ -49,6 +48,7 @@ import CourseDetail from './components/CourseDetail';
 import PrivateRoute from './components/PrivateRoute';
 import Quiz from './components/Quiz';
 import VirtualClassroom from './components/VirtualClassroom';
+import Home from './components/Home'; // Import the Home component
 import './App.css';
 
 const App = () => {
@@ -56,7 +56,9 @@ const App = () => {
     <Router>
       <div className="app-container">
         <Routes>
-          <Route path="/" element={<Navigate to="/login" />} /> {/* Redirect to login */}
+          {/* Redirect root path to /home */}
+          <Route path="/" element={<Navigate to="/home" />} /> 
+          <Route path="/home" element={<Home />} /> {/* Home page route */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route 

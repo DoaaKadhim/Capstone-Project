@@ -68,22 +68,62 @@
 
 // export default Dashboard;
 
-////// other new one 
-import React from 'react';
-import CourseList from './CourseList';
-import Profile from './Profile.jsx';  // Import Profile component
+// ////// other new one 
+// import React from 'react';
+// import CourseList from './CourseList';
+// import Profile from './Profile.jsx';  // Import Profile component
+
+// const Dashboard = () => {
+//   return (
+//     <div>
+//       <h1>Dashboard</h1>
+//       {/* Profile component */}
+//       <Profile />
+
+//       {/* Course list or other components */}
+//       <CourseList />
+//     </div>
+//   );
+// };
+
+// export default Dashboard;
+///////////////////NEW TRY
+// src/components/Dashboard.jsx
+// src/components/Dashboard.jsx
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Dashboard = () => {
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    // Simulate fetching courses (replace this with your API call)
+    const fetchCourses = async () => {
+      // Sample courses data (replace this with an actual API call)
+      const sampleCourses = [
+        { id: 1, title: 'React for Beginners' },
+        { id: 2, title: 'Advanced JavaScript' },
+        { id: 3, title: 'Introduction to CSS' },
+      ];
+      setCourses(sampleCourses);
+    };
+
+    fetchCourses();
+  }, []);
+
   return (
     <div>
-      <h1>Dashboard</h1>
-      {/* Profile component */}
-      <Profile />
+      <h2>This is your Dashboard!</h2>
+      <p>Here are your courses!</p>
+      <ul>
+        {courses.map(course => (
+          <li key={course.id}>{course.title}</li>
+        ))}
+      </ul>
+      <Link to="/home">Back to Home</Link>
 
-      {/* Course list or other components */}
-      <CourseList />
     </div>
   );
 };
 
-export default Dashboard;
+export default Dashboard; // Ensure only one default export
