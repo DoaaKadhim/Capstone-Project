@@ -130,7 +130,14 @@ const Home = () => {
 
       <div className="card-container">
         <div className="home-card">
-          <h2>Courses Overview</h2>
+
+        <Link to="/course-overview">
+        <button className="home-button">Courses Overview</button>
+        {/* <li><Link to="/course-overview">Course Overview</Link></li> */}
+
+      </Link>
+
+          {/* <h2>Courses Overview</h2> */}
           <p>Explore your enrolled courses and keep track of your progress.</p>
         </div>
 

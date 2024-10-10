@@ -174,52 +174,58 @@
 // export default Dashboard;
 /////////last try 
 // src/components/Dashboard.js
+///////////////////////////
+////////////////////////////
+// //work
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../App.css'; // Import your CSS for styling
-import { useLocation } from 'react-router-dom';
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+// import '../App.css'; // Import your CSS for styling
+// import { useLocation } from 'react-router-dom';
 
 
-const Dashboard = () => {
-  const location = useLocation();
-  console.log('Current location:', location.pathname); // Log the current path
+// const Dashboard = () => {
+//   const location = useLocation();
+//   console.log('Current location:', location.pathname); // Log the current path
 
-  return (
-    <div className="dashboard-container">
-      <h1>Student Dashboard</h1>
-      <div className="dashboard-content">
-        <section className="dashboard-summary">
-          <h2>Summary</h2>
-          <p>Welcome back! Here’s an overview of your current progress.</p>
-          <ul>
-            <li>Courses Enrolled: 5</li>
-            <li>Completed Quizzes: 10</li>
-            <li>Upcoming Classes: 3</li>
-          </ul>
-        </section>
+//   return (
+//     <div className="dashboard-container">
+//       <h1>Student Dashboard</h1>
+//       <div className="dashboard-content">
+//         <section className="dashboard-summary">
+//           <h2>Summary</h2>
+//           <p>Welcome back! Here’s an overview of your current progress.</p>
+//           <ul>
+//             <li>Courses Enrolled: 5</li>
+//             <li>Completed Quizzes: 10</li>
+//             <li>Upcoming Classes: 3</li>
+//           </ul>
+//         </section>
 
-        <section className="dashboard-links">
-          <h2>Quick Links</h2>
-          <ul>
-            <li><Link to="/courses">View Courses</Link></li>
-            <li><Link to="/quiz">Take Quiz</Link></li>
-            <li><Link to="/virtual-classroom">Join Virtual Classroom</Link></li>
-          </ul>
-        </section>
+//         <section className="dashboard-links">
+//           <h2>Quick Links</h2>
+//           <ul>
+//             <li><Link to="/courses">View Courses</Link></li>
+//             <li><Link to="/quiz">Take Quiz</Link></li>
+//             <li><Link to="/virtual-classroom">Join Virtual Classroom</Link></li>
+//           </ul>
+//         </section>
 
-        <section className="dashboard-notifications">
-          <h2>Notifications</h2>
-          <p>You have 2 new messages.</p>
-          <p>Your next class starts in 1 hour!</p>
-        </section>
-      </div>
-      <Link to="/" className="back-button">Back to Home</Link>
-    </div>
-  );
-};
+//         <section className="dashboard-notifications">
+//           <h2>Notifications</h2>
+//           <p>You have 2 new messages.</p>
+//           <p>Your next class starts in 1 hour!</p>
+//         </section>
+//       </div>
+//       <Link to="/" className="back-button">Back to Home</Link>
+//     </div>
+//   );
+// };
 
-export default Dashboard;
+// export default Dashboard;
+/////////////////////
+//////////////////////
+
 //++++++++++++++++++++++++
 
 // // src/components/Dashboard.js
@@ -304,3 +310,51 @@ export default Dashboard;
 // };
 
 // export default Dashboard;
+
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../App.css'; // Import your CSS for styling
+import { useLocation } from 'react-router-dom';
+
+const Dashboard = () => {
+  const location = useLocation();
+  console.log('Current location:', location.pathname); // Log the current path
+
+  return (
+    <div className="dashboard-container">
+      <h1>Student Dashboard</h1>
+      <div className="dashboard-content">
+        <section className="dashboard-summary">
+          <h2>Summary</h2>
+          <p>Welcome back! Here’s an overview of your current progress.</p>
+          <ul>
+            <li>Courses Enrolled: 5</li>
+            <li>Completed Quizzes: 10</li>
+            <li>Upcoming Classes: 3</li>
+          </ul>
+        </section>
+
+        <section className="dashboard-links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><Link to="/courses">View Courses</Link></li>
+            <li><Link to="/quiz">Take Quiz</Link></li>
+            <li><Link to="/virtual-classroom">Join Virtual Classroom</Link></li>
+            {/* <li><Link to="/course-overview">Course Overview</Link></li> Added link to course overview */}
+
+          </ul>
+        </section>
+
+        <section className="dashboard-notifications">
+          <h2>Notifications</h2>
+          <p>You have 2 new messages.</p>
+          <p>Your next class starts in 1 hour!</p>
+        </section>
+      </div>
+      <Link to="/" className="back-button">Back to Home</Link>
+    </div>
+  );
+};
+
+export default Dashboard;

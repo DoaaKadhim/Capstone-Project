@@ -399,3 +399,197 @@ body {
     margin-bottom: 30px;
   }
 }
+
+/* Dashboard Styles */
+.dashboard-container {
+  max-width: 1280px; /* Same max width as Home */
+  margin: 20px auto; /* Centering */
+  padding: 2rem; /* Consistent padding */
+  background-color: #ffffff; /* Clean background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  color: #333; /* Consistent text color */
+}
+
+/* Header Section */
+.dashboard-header {
+  background-color: #4a90e2; /* Primary color for header */
+  color: #fff; /* White text */
+  padding: 30px; /* Consistent padding */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center; /* Center text */
+  margin-bottom: 30px; /* Space below header */
+}
+
+.dashboard-header h1 {
+  font-size: 2.5em; /* Consistent font size */
+  margin: 0; /* Remove default margin */
+}
+
+.dashboard-header p {
+  font-size: 1.2em; /* Consistent font size for subtitle */
+  margin: 5px 0 0; /* Controlled spacing */
+}
+
+/* Content Section */
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  grid-gap: 20px; /* Space between items */
+  margin-bottom: 30px; /* Space below content */
+}
+
+.card {
+  background-color: #fff; /* White background for cards */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Consistent padding */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.card h2 {
+  color: #4a90e2; /* Consistent heading color */
+  font-size: 1.5em; /* Consistent heading size */
+  margin-bottom: 15px; /* Space below heading */
+}
+
+.card p {
+  font-size: 1.1em; /* Consistent paragraph font size */
+  color: #666; /* Grey text for paragraphs */
+  margin: 5px 0; /* Controlled spacing */
+}
+
+/* Navigation Links */
+.dashboard-navigation ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center links */
+}
+
+.dashboard-navigation ul li {
+  margin: 0 15px; /* Space between links */
+}
+
+.dashboard-navigation ul li a {
+  background-color: #4a90e2; /* Consistent link background */
+  color: #fff; /* White text */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px; /* Consistent padding */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.dashboard-navigation ul li a:hover {
+  background-color: #357ab8; /* Darker color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .dashboard-content {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-content {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+
+  .dashboard-header h1 {
+    font-size: 2em; /* Slightly smaller on mobile */
+  }
+
+  .dashboard-header p {
+    font-size: 1em; /* Slightly smaller on mobile */
+  }
+}
+
+.course-overview {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-overview h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.course-overview h2 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #555;
+}
+
+.course-overview p,
+.course-overview ul {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.course-overview ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+/* src/App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#course-overview {
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+/* Add this to your App.css or Dashboard.css */
+.overview-button {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Center align text */
+}
+
+.overview-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
