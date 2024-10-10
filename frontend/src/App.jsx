@@ -101,7 +101,6 @@ import Home from './components/Home';
 import LogoutConfirmation from './components/LogoutConfirmation';
 import QuizResult from './components/QuizResult.jsx';
 import VirtualClasses from './components/VirtualClasses'; // Correct import
-
 import './App.css';
 
 const App = () => {
@@ -122,13 +121,14 @@ const App = () => {
             } 
           />
           <Route path="/courses" element={<CourseList />} />
-          <Route path="/courses/:id" element={<CourseDetail />} />
+          {/* <Route path="/courses/:id" element={<CourseDetail />} /> */}
           <Route path="/course-overview" element={<CourseOverview />} /> {/* Add this line */}
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/virtual-classroom" element={<VirtualClassroom />} />
           <Route path="/logout-confirmation" element={<LogoutConfirmation />} />
           <Route path="/quiz-result" element={<QuizResult />} />
           <Route path="/virtual-classes" element={<VirtualClasses />} /> {/* Add Virtual Classes route */}
+          <Route path="/course-details/:id" element={<CourseDetail />} /> {/* Route for CourseDetail */}
 
 
         </Routes>
