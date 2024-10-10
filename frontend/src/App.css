@@ -677,3 +677,45 @@ footer {
 .feedback.incorrect {
   color: #f44336;
 }
+.virtual-classes-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.classes-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.class-item {
+  background-color: #f0f0f0;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.class-item h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.class-item p {
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+.virtual-classes-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.virtual-classes-btn:hover {
+  background-color: #0056b3;
+}
