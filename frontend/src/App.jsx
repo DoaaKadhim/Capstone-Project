@@ -38,6 +38,7 @@
 // export default App;
 /////////////
 //new
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
@@ -48,7 +49,8 @@ import CourseDetail from './components/CourseDetail';
 import PrivateRoute from './components/PrivateRoute';
 import Quiz from './components/Quiz';
 import VirtualClassroom from './components/VirtualClassroom';
-import Home from './components/Home'; // Import the Home component
+import Home from './components/Home';
+import LogoutConfirmation from './components/LogoutConfirmation'; // Import the new component
 import './App.css';
 
 const App = () => {
@@ -56,10 +58,9 @@ const App = () => {
     <Router>
       <div className="app-container">
         <Routes>
-          {/* Redirect root path to /home */}
-          <Route path="/" element={<Navigate to="/home" />} /> 
-          <Route path="/home" element={<Home />} /> {/* Home page route */}
+          <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route 
             path="/dashboard" 
@@ -73,6 +74,7 @@ const App = () => {
           <Route path="/courses/:id" element={<CourseDetail />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/virtual-classroom" element={<VirtualClassroom />} />
+          <Route path="/logout-confirmation" element={<LogoutConfirmation />} /> {/* Add the logout confirmation route */}
         </Routes>
       </div>
     </Router>

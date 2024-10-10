@@ -1,3 +1,13 @@
+/* App.css */
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,19 +15,23 @@
   text-align: center;
 }
 
+/* Logo Styles */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -33,36 +47,17 @@
   }
 }
 
+/* Card Styles */
 .card {
   padding: 2em;
 }
 
+/* Text Styles */
 .read-the-docs {
   color: #888;
 }
-/* Add some basic styling for the back-to-home links */
-.back-to-home {
-  display: inline-block;
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 20px;
-}
 
-.back-to-home:hover {
-  background-color: #0056b3;
-}
-/* src/components/Home.css */
-
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f9;
-}
-
+/* Home Styles */
 .home-container {
   display: flex;
   flex-direction: column;
@@ -118,6 +113,7 @@ body {
   color: #fff;
 }
 
+/* Logout Button Styles */
 .logout-button {
   padding: 0.7rem 1.5rem;
   background-color: #e74c3c;
@@ -127,8 +123,62 @@ body {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 20px; /* Ensure there's space above the button */
 }
 
 .logout-button:hover {
   background-color: #c0392b;
+}
+
+/* Back Button Styles */
+.back-button {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  background-color: #007bff; /* Primary color */
+  color: white;
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+/* Dashboard Styles */
+.dashboard-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-content {
+  margin-top: 20px;
+}
+
+.dashboard-summary,
+.dashboard-links,
+.dashboard-notifications {
+  margin-bottom: 20px;
+}
+
+.dashboard-summary h2,
+.dashboard-links h2,
+.dashboard-notifications h2 {
+  color: #333;
+}
+
+.dashboard-links ul,
+.dashboard-notifications ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard-links ul li,
+.dashboard-notifications p {
+  margin: 5px 0;
 }

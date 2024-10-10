@@ -123,6 +123,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from 'react-router-dom'; // Ensure Link is imported
 
 const Login = () => {
   const [emailInput, setEmailInput] = useState(''); // State for email input
