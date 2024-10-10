@@ -182,3 +182,220 @@ body {
 .dashboard-notifications p {
   margin: 5px 0;
 }
+/* Dashboard general layout */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f7fa; /* Soft gray background for the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Header Section */
+.dashboard-header {
+  background-color: #4a90e2; /* Light blue header background */
+  color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.dashboard-header p {
+  font-size: 1.2em;
+  margin: 5px 0 0;
+}
+
+/* Content Section */
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-gap: 20px; /* Spacing between items */
+  margin-bottom: 30px;
+}
+
+/* Each section or card */
+.courses-overview, .quiz-overview, .virtual-classes {
+  background-color: #fff; /* White card background */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: transform 0.3s ease-in-out;
+}
+
+.courses-overview:hover, .quiz-overview:hover, .virtual-classes:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+}
+
+.courses-overview h2, .quiz-overview h2, .virtual-classes h2 {
+  color: #4a90e2;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+/* Content text */
+.courses-overview p, .quiz-overview p, .virtual-classes p {
+  font-size: 1.1em;
+  color: #666; /* Lighter color for regular text */
+  margin: 5px 0;
+}
+
+/* Navigation links */
+.dashboard-navigation ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-navigation ul li {
+  margin: 0 15px;
+}
+
+.dashboard-navigation ul li a {
+  background-color: #4a90e2;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-navigation ul li a:hover {
+  background-color: #357ab8; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .dashboard-content {
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-content {
+    grid-template-columns: 1fr; /* Stack content in a single column on mobile */
+  }
+
+  .dashboard-header h1 {
+    font-size: 2em;
+  }
+
+  .dashboard-header p {
+    font-size: 1em;
+  }
+
+  .dashboard-navigation ul {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+  }
+
+  .dashboard-navigation ul li {
+    margin: 10px 0;
+  }
+}
+
+/* General Layout */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Make sure it takes the full height of the viewport */
+  background-color: #f0f4f8; /* Light gray background for professional look */
+  padding: 40px;
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Dark gray text for readability */
+}
+
+/* Header Section */
+.home-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-header h1 {
+  font-size: 3em;
+  color: #2c3e50; /* Darker blue-gray for a professional header */
+  margin-bottom: 10px;
+}
+
+.home-header p {
+  font-size: 1.2em;
+  color: #7f8c8d; /* Softer gray for subtitle */
+}
+
+/* Call to Action Button */
+.home-button {
+  background-color: #3498db; /* Professional blue for button */
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.home-button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Card Section */
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 50px;
+}
+
+.home-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  width: 30%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for card depth */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Slight lift on hover */
+}
+
+.home-card h2 {
+  font-size: 1.5em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.home-card p {
+  font-size: 1em;
+  color: #7f8c8d; /* Softer gray for card text */
+}
+
+@media (max-width: 900px) {
+  .card-container {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center;
+  }
+
+  .home-card {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
