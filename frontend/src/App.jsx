@@ -99,6 +99,8 @@ import Quiz from './components/Quiz';
 import VirtualClassroom from './components/VirtualClassroom';
 import Home from './components/Home';
 import LogoutConfirmation from './components/LogoutConfirmation';
+import QuizResult from './components/QuizResult.jsx';
+
 import './App.css';
 
 const App = () => {
@@ -124,6 +126,8 @@ const App = () => {
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/virtual-classroom" element={<VirtualClassroom />} />
           <Route path="/logout-confirmation" element={<LogoutConfirmation />} />
+          <Route path="/quiz-result" element={<QuizResult />} />
+
         </Routes>
       </div>
     </Router>

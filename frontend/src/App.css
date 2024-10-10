@@ -593,3 +593,87 @@ footer {
 .overview-button:hover {
   background-color: #0056b3; /* Darker shade on hover */
 }
+/* App.css */
+.quiz-result-container {
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.score-section p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.result-actions {
+  margin-top: 20px;
+}
+
+.retake-button, .back-to-courses-link {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.retake-button:hover, .back-to-courses-link:hover {
+  background-color: #0056b3;
+}
+
+.incorrect-questions {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.incorrect-questions ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.incorrect-questions li {
+  margin-bottom: 15px;
+}
+.quiz-result-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.quiz-result-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quiz-result-container li {
+  margin: 10px 0;
+}
+.correct {
+  background-color: #4caf50; /* Green for correct answer */
+  color: white;
+}
+
+.incorrect {
+  background-color: #f44336; /* Red for incorrect answer */
+  color: white;
+}
+
+.feedback {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.feedback.correct {
+  color: #4caf50;
+}
+
+.feedback.incorrect {
+  color: #f44336;
+}

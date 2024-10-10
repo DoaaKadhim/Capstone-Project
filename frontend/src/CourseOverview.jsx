@@ -13,16 +13,16 @@ const CourseOverview = () => {
         This course provides an introduction to web development, covering essential technologies like HTML, CSS, and JavaScript.
       </p>
       <h2>Learning Objectives</h2>
-      <ul>
+      
         <li>Understand core web technologies.</li>
         <li>Build responsive web applications.</li>
         <li>Implement interactivity using JavaScript.</li>
-      </ul>
+      
       <h2>Course Outline</h2>
-      <ul>
+      
         <li><strong>Module 1: Introduction to HTML/CSS</strong> - Learn the basics of web structure and styling.</li>
         <li><strong>Module 2: JavaScript Basics</strong> - Explore programming fundamentals.</li>
-      </ul>
+      
       <h2>Prerequisites</h2>
       <p>Basic understanding of computer science concepts.</p>
       <h2>Target Audience</h2>
@@ -37,7 +37,10 @@ const CourseOverview = () => {
       <p>Jane Doe, a web development expert with over 10 years of experience.</p>
       <h2>FAQs</h2>
       <p><strong>Q: How much time do I need to dedicate to this course?</strong><br />A: Expect to spend around 3 hours per week.</p>
+      <Link to="/" className="back-button">Back to Home</Link>
+
     </section>
+    
   );
 };
 

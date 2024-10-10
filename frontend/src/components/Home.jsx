@@ -133,8 +133,6 @@ const Home = () => {
 
         <Link to="/course-overview">
         <button className="home-button">Courses Overview</button>
-        {/* <li><Link to="/course-overview">Course Overview</Link></li> */}
-
       </Link>
 
           {/* <h2>Courses Overview</h2> */}
@@ -142,12 +140,17 @@ const Home = () => {
         </div>
 
         <div className="home-card">
-          <h2>Quiz Results</h2>
+        <Link to="/quiz-result">
+        <button className="home-button">Quiz Results</button>
+      </Link>
           <p>Check your quiz results and monitor your performance.</p>
         </div>
 
         <div className="home-card">
-          <h2>Virtual Classes</h2>
+          {/* <h2>Virtual Classes</h2> */}
+          <Link to="/virtual-classes">
+        <button className="home-button">Virtual Classes</button>
+          </Link>
           <p>Attend live virtual classes and manage your class schedule.</p>
         </div>
       </div>
