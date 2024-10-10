@@ -128,7 +128,8 @@ const App = () => {
           <Route path="/logout-confirmation" element={<LogoutConfirmation />} />
           <Route path="/quiz-result" element={<QuizResult />} />
           <Route path="/virtual-classes" element={<VirtualClasses />} /> {/* Add Virtual Classes route */}
-          <Route path="/course-details/:id" element={<CourseDetail />} /> {/* Route for CourseDetail */}
+          <Route path="/course-details/:id" element={<CourseDetail />} /> Route for CourseDetail
+          <Route path="/course-details/:id" component={CourseDetail} />
 
 
         </Routes>
