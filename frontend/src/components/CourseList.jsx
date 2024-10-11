@@ -10,7 +10,8 @@ const CourseList = () => {
     const fetchCourses = async () => {
       try {
         const response = await getCourses();
-        setCourses(response.data);
+        console.log(response)
+        setCourses(response);
       } catch (error) {
         console.error("Error fetching courses", error);
       }
@@ -23,9 +24,9 @@ const CourseList = () => {
     <div>
       <h2>Available Courses</h2>
       <ul>
-        {courses.map(course => (
-          <li key={course._id}>
-            <Link to={`/courses/${course._id}`}>{course.title}</Link>
+        {courses && courses.map(course => (
+          <li key={course.id}>
+            <Link to={`/courses/${course.id}`}>{course.name}</Link>
           </li>
         ))}
       </ul>
