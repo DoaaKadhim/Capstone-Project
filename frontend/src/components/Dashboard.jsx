@@ -1,6 +1,4 @@
-
-// export default Dashboard;
-//try new one 
+ 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css'; // Import your CSS for styling

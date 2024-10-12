@@ -211,7 +211,7 @@ const VirtualClasses = () => {
           ))}
         </ul>
       )}
-      <Link to="/home" className="back-to-home">Back to Home</Link>
+      <Link  to="/home" className="back-button">Back to Home</Link>
     </div>
   );
 };

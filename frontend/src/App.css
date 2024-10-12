@@ -131,16 +131,23 @@ body {
 }
 
 /* Back Button Styles */
-.back-button {
-  display: inline-block;
+.back-button ,.enroll-link {
+  display: block;
   margin: 20px auto;
   padding: 10px 15px;
-  background-color: #007bff; /* Primary color */
+  background-color: #3498db; /* Primary color */
   color: white;
   text-decoration: none; /* Remove underline */
   border-radius: 5px; /* Rounded corners */
   transition: background-color 0.3s; /* Smooth transition */
+
+  /* display: inline-block; */
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
 }
+
 
 .back-button:hover {
   background-color: #0056b3; /* Darker shade on hover */
@@ -746,26 +753,6 @@ footer {
   text-decoration: underline;
 }
 
-.back-to-home {
-  display: block;
-  margin-top: 20px;
-  color: red;
-  text-decoration: underline;
-}
-.enroll-link {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 12px;
-  background-color: #28a745;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.enroll-link:hover {
-  background-color: #218838;
-}
 .enroll-btn {
   padding: 10px 20px;
   background-color: #007bff;
@@ -775,9 +762,14 @@ footer {
   cursor: pointer;
 }
 
-.enroll-btn:hover {
+.enroll-btn,.enroll-link:hover  {
   background-color: #0056b3;
 }
+
+/* 
+:hover {
+  background-color: #218838;
+} */
 
 .enroll-page {
   text-align: center;
@@ -785,7 +777,7 @@ footer {
 }
 
 h2 {
-  color: green;
+  color: #007bff;
 }
 /* EnrollPage.css */
 

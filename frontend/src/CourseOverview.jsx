@@ -41,7 +41,7 @@ const CourseOverview = () => {
       <h1>{course.title}</h1>
       <p>{course.description}</p>
       {/* Add other course details here if needed */}
-      <Link to="/courses">Back to Courses</Link>
+      <Link className="back-button" to="/courses">Back to Courses</Link>
     </div>
   );
 };

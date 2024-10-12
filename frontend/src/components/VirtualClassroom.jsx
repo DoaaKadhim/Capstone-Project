@@ -10,7 +10,7 @@ const VirtualClassroom = () => {
       <button>Join Class</button>
 
       {/* Link to navigate back to the home page */}
-      <Link to="/home" className="back-to-home">Back to Home</Link>
+      <Link to="/home" className="back-button">Back to Home</Link>
     </div>
   );
 };
