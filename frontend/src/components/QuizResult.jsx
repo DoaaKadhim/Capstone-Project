@@ -44,7 +44,7 @@ const QuizResults = () => {
         </ul>
       )}
             <Link to="/" className="back-button">Back to Home</Link>
-            </div>
+    </div>
   );
 };
 

@@ -58,17 +58,42 @@ const EnrollPage = () => {
     const [enrollmentSuccess, setEnrollmentSuccess] = useState(false); // State for enrollment success
     const [enrollmentMessage, setEnrollmentMessage] = useState('');
 
+    // const handleEnroll = async () => {
+    //     try {
+    //         console.log('Enrolling with test data:', { studentId, courseId }); // Log details to console
+    //         const response = await axios.post('http://localhost:5000/api/enroll', {
+    //             studentId: studentId,
+    //             courseId: courseId,
+    //         });
+    //         setEnrollmentMessage('Enrollment successful: ' + response.data.message);
+    //         setEnrollmentSuccess(true); // Set to true on successful enrollment
+            
+    //         // Log enrollment details to console
+    //         console.log('Enrollment successful:', {
+    //             studentId,
+    //             courseId,
+    //             responseData: response.data
+    //         });
+    //     } catch (error) {
+    //         console.error('Enrollment failed:', error);
+    //         setEnrollmentMessage('Enrollment failed: ' + (error.response?.data?.message || 'Unexpected error occurred.'));
+    //     }
+    // };
     const handleEnroll = async () => {
         try {
-            console.log('Enrolling with test data:', { studentId, courseId }); // Log details to console
+            console.log('Enrolling with test data:', { studentId, courseId });
             const response = await axios.post('http://localhost:5000/api/enroll', {
                 studentId: studentId,
                 courseId: courseId,
             });
+    
             setEnrollmentMessage('Enrollment successful: ' + response.data.message);
-            setEnrollmentSuccess(true); // Set to true on successful enrollment
-            
-            // Log enrollment details to console
+            setEnrollmentSuccess(true);
+    
+            // Update enrolled courses in localStorage
+            const currentEnrolledCourses = JSON.parse(localStorage.getItem('enrolledCourses')) || 0;
+            localStorage.setItem('enrolledCourses', JSON.stringify(currentEnrolledCourses + 1));
+    
             console.log('Enrollment successful:', {
                 studentId,
                 courseId,
@@ -79,7 +104,7 @@ const EnrollPage = () => {
             setEnrollmentMessage('Enrollment failed: ' + (error.response?.data?.message || 'Unexpected error occurred.'));
         }
     };
-
+    
     return (
         <div style={{ position: 'relative', minHeight: '100vh' }}>
             {!enrollmentSuccess ? ( // Show enrollment form if not enrolled

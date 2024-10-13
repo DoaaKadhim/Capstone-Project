@@ -21,7 +21,7 @@ const Home = () => {
         <div className="home-card">
 
         <Link to="/course-overview">
-        <button className="home-button">Course Overview</button>
+        <button className="home-button">Courses Overview</button>
       </Link>
 
           {/* <h2>Courses Overview</h2> */}

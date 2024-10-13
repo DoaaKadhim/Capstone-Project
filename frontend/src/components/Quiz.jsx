@@ -143,7 +143,7 @@
 // };
 
 // export default Quiz;
-//the above one it work
+// the above one it work
 
 // import React, { useState } from 'react';
 // import { useNavigate, Link } from 'react-router-dom';
@@ -280,7 +280,10 @@
 // };
 
 // export default Quiz;
-////============================
+// //============================
+//try quiz
+
+
 
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
@@ -364,6 +367,9 @@ const Quiz = () => {
       };
       localStorage.setItem('quizResults', JSON.stringify([...previousResults, newResult]));
 
+      // Increment the completed quizzes count
+      handleQuizCompletion();  // <- Call this function to update completed quizzes count
+
       // Navigate to Quiz Result
       navigate('/quiz-result', {
         state: {
@@ -373,6 +379,18 @@ const Quiz = () => {
         }
       });
     }
+  };
+
+  // Update localStorage when a quiz is completed
+  const handleQuizCompletion = () => {
+    // Retrieve the current number of completed quizzes from localStorage
+    const completedQuizzes = JSON.parse(localStorage.getItem('completedQuizzes')) || 0;
+    
+    // Increment the number of completed quizzes
+    const newQuizCount = completedQuizzes + 1;
+    
+    // Update localStorage with the new value
+    localStorage.setItem('completedQuizzes', JSON.stringify(newQuizCount));
   };
 
   return (
@@ -414,8 +432,8 @@ const Quiz = () => {
           {isAnswered && <button onClick={nextQuestion}>Next Question</button>}
         </>
       )}
-            <Link to="/" className="back-button">Back to Home</Link>
-            </div>
+      <Link to="/" className="back-button">Back to Home</Link>
+    </div>
   );
 };
 

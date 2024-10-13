@@ -274,6 +274,7 @@ import Home from './components/Home';
 import LogoutConfirmation from './components/LogoutConfirmation';
 import QuizResult from './components/QuizResult';
 import VirtualClasses from './components/VirtualClasses';
+
 import './App.css';
 
 const App = () => {
@@ -311,6 +312,7 @@ const App = () => {
           <Route path="/virtual-classes" element={<VirtualClasses />} />
           <Route path="/course/:courseId" element={<CourseOverview />} />
           <Route path="/" element={<CourseList />} />
+
         </Routes>
       </div>
     </Router>

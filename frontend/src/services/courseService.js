@@ -8,7 +8,7 @@ const API_URL = 'http://localhost:5000'; // Adjust this URL to match your backen
 export const getCourses = async () => {
   try {
     const response = await axios.get(`${API_URL}/api/courses`);
-    console.log(response)
+    console.log(response.data)
     return response.data; // Return the actual courses data
   } catch (error) {
     console.error("Error fetching courses:", error);
@@ -47,4 +47,24 @@ export const trackProgress = async (courseId, userId, progressData) => {
     console.error("Error tracking progress:", error);
     throw error;
   }
+};
+
+
+//===================================
+export const completeQuiz = (currentQuizCount) => {
+  const newQuizCount = currentQuizCount + 1;  // Increment the current quiz count
+  localStorage.setItem('completedQuizzes', JSON.stringify(newQuizCount));  // Store the updated quiz count in localStorage
+  return newQuizCount;  // Return the updated quiz count
+};
+
+export const fetchStudentData = () => {
+  const courses = JSON.parse(localStorage.getItem('enrolledCourses')) || 0;
+  const quizzes = JSON.parse(localStorage.getItem('completedQuizzes')) || 0;  // Fetch quizzes count
+  const classes = JSON.parse(localStorage.getItem('upcomingClasses')) || 0;
+  
+  return {
+    courses,
+    quizzes,
+    classes,
+  };
 };
