@@ -41,8 +41,10 @@ const CourseList = () => {
       <ul>
         {courses && courses.map((course, index) => (
           <li key={`${course.id}-${index}`}>
-            <Link to={`/courses/${course.id}`}>{course.name}</Link>
+            <Link to={`/courses/${course.id}`}>{course.name}
+            </Link>
           </li>
+
         ))}
       </ul>
      <Link className="back-button" to="/home">Back to Home</Link>

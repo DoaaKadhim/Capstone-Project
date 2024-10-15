@@ -1,7 +1,7 @@
 
 /* General Styles */
 body {
-  background-image: url('img.jpg'); 
+  /* background-image: url('img.jpg');  */
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
@@ -59,6 +59,8 @@ body {
 
 /* Home Styles */
 .home-container {
+  background-image: url('img.jpg'); 
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,16 +154,7 @@ body {
 .back-button:hover {
   background-color: #0056b3; /* Darker shade on hover */
 }
-/* Dashboard Styles */
-.dashboard-container {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+
 
 .dashboard-content {
   margin-top: 20px;
@@ -189,18 +182,6 @@ body {
 .dashboard-notifications p {
   margin: 5px 0;
 }
-/* Dashboard general layout */
-.dashboard-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f5f7fa; /* Soft gray background for the container */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  font-family: 'Arial', sans-serif;
-  color: #333;
-}
-
 /* Header Section */
 .dashboard-header {
   background-color: #4a90e2; /* Light blue header background */
@@ -227,6 +208,8 @@ body {
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
   grid-gap: 20px; /* Spacing between items */
   margin-bottom: 30px;
+  background-image: url('img.jpg'); 
+
 }
 
 /* Each section or card */
@@ -313,6 +296,7 @@ body {
 
 /* General Layout */
 .home-container {
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -409,6 +393,7 @@ body {
 
 /* Dashboard Styles */
 .dashboard-container {
+  
   max-width: 1280px; /* Same max width as Home */
   margin: 20px auto; /* Centering */
   padding: 2rem; /* Consistent padding */
@@ -552,7 +537,8 @@ body {
 /* src/App.css */
 
 body {
-  
+  background-image: url('img.jpg'); 
+
   /* font-family: Arial, sans-serif; */
   /* margin: 0; */
   padding: 20px;
@@ -757,7 +743,6 @@ footer {
 
 .enroll-btn {
   padding: 10px 20px;
-  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
@@ -765,12 +750,12 @@ footer {
 }
 
 .enroll-btn,.enroll-link:hover  {
-  background-color: #0056b3;
+  background-color: #3498db;
 }
-
 /* 
+
 :hover {
-  background-color: #218838;
+  background-color: #lightblue;
 } */
 
 .enroll-page {

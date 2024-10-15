@@ -23,7 +23,8 @@ a:hover {
 }
 
 body {
-  
+
+  /* background-image: url('img.jpg');  */
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -58,6 +59,7 @@ button:focus-visible {
   :root {
     color: #213547;
     background-color: #ffffff;
+    
 
   }
   a:hover {
