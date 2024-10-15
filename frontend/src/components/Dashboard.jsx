@@ -81,7 +81,7 @@
 //       const courses = JSON.parse(localStorage.getItem('enrolledCourses')) || 0;
 //       const quizzes = JSON.parse(localStorage.getItem('completedQuizzes')) || 0;
 //       const classes = JSON.parse(localStorage.getItem('upcomingClasses')) || 0;
-      
+
 //       // Update the state with the fetched data
 //       setEnrolledCourses(courses);
 //       setCompletedQuizzes(quizzes);
@@ -185,7 +185,86 @@
 // };
 
 // export default Dashboard;
-////////////try the new one for quiz
+// ////////////try the new one for quiz
+// import React, { useState, useEffect } from 'react';
+// import { Link } from 'react-router-dom';
+// import '../App.css'; // Import your CSS for styling
+
+// const Dashboard = () => {
+
+//   const [enrolledCourses, setEnrolledCourses] = useState(0);
+//   const [completedQuizzes, setCompletedQuizzes] = useState(0);
+//   const [upcomingClasses, setUpcomingClasses] = useState(0);
+
+//   // Function to fetch the latest data from localStorage
+//   const fetchStudentData = () => {
+//     const courses = JSON.parse(localStorage.getItem('enrolledCourses')) || 0;
+//     const quizzes = JSON.parse(localStorage.getItem('completedQuizzes')) || 0;
+//     const classes = JSON.parse(localStorage.getItem('upcomingClasses')) || 0;
+
+//     setEnrolledCourses(courses);
+//     setCompletedQuizzes(quizzes);
+//     setUpcomingClasses(classes);
+//   };
+
+//   useEffect(() => {
+//     // Fetch data when the component mounts
+//     fetchStudentData();
+
+//     // Set up an event listener to listen for changes in localStorage
+//     const handleStorageChange = () => {
+//       fetchStudentData();
+//     };
+
+//     // Add event listener for storage change
+//     window.addEventListener('storage', handleStorageChange);
+
+//     return () => {
+//       // Clean up event listener when the component unmounts
+//       window.removeEventListener('storage', handleStorageChange);
+//     };
+//   }, []);
+
+//   return (
+//     <div className="dashboard-container">
+//       <h1>Student Dashboard</h1>
+//       <div className="dashboard-content">
+//         <section className="dashboard-summary">
+//           <h2>Summary</h2>
+//           <p>Welcome back! Here’s an overview of your current progress.</p>
+//           <ul>
+//             <li>Courses Enrolled: {enrolledCourses}</li>
+//             <li>Completed Quizzes: {completedQuizzes}</li>
+//             <li>Upcoming Classes: {upcomingClasses}</li>
+//           </ul>
+//         </section>
+
+//         <section className="dashboard-links">
+//           <h2>Quick Links</h2>
+//           <ul>
+//             <li><Link to="/courses">View Courses</Link></li>
+//             <li><Link to="/quiz">Take Quiz</Link></li>
+//             <li><Link to="/virtual-classroom">Join Virtual Classroom</Link></li>
+//           </ul>
+//         </section>
+
+//         <section className="dashboard-notifications">
+//           <h2>Notifications</h2>
+//           <p>You have 2 new messages.</p>
+//           <p>Your next class starts in 1 hour!</p>
+//         </section>
+
+//         {/* Link to go back to the home page */}
+//         <Link to="/" className="back-button">Back to Home</Link>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Dashboard;
+/////////////////////////////
+//try new opton pending assignment 
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css'; // Import your CSS for styling
@@ -193,17 +272,17 @@ import '../App.css'; // Import your CSS for styling
 const Dashboard = () => {
   const [enrolledCourses, setEnrolledCourses] = useState(0);
   const [completedQuizzes, setCompletedQuizzes] = useState(0);
-  const [upcomingClasses, setUpcomingClasses] = useState(0);
+  const [pendingAssignments, setPendingAssignments] = useState(0); // Updated state variable
 
   // Function to fetch the latest data from localStorage
   const fetchStudentData = () => {
     const courses = JSON.parse(localStorage.getItem('enrolledCourses')) || 0;
     const quizzes = JSON.parse(localStorage.getItem('completedQuizzes')) || 0;
-    const classes = JSON.parse(localStorage.getItem('upcomingClasses')) || 0;
+    const assignments = JSON.parse(localStorage.getItem('pendingAssignments')) || 0; // Fetch pending assignments
 
     setEnrolledCourses(courses);
     setCompletedQuizzes(quizzes);
-    setUpcomingClasses(classes);
+    setPendingAssignments(assignments); // Update pending assignments state
   };
 
   useEffect(() => {
@@ -234,7 +313,7 @@ const Dashboard = () => {
           <ul>
             <li>Courses Enrolled: {enrolledCourses}</li>
             <li>Completed Quizzes: {completedQuizzes}</li>
-            <li>Upcoming Classes: {upcomingClasses}</li>
+            <li>Pending Assignments: {pendingAssignments}</li> {/* Updated option */}
           </ul>
         </section>
 

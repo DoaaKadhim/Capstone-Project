@@ -1,13 +1,11 @@
-/* App.css */
 
 /* General Styles */
 body {
-  background-image: url('img.jpg'); /* Replace with your downloaded image path */
-
+  background-image: url('img.jpg'); 
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
+   background-color: #f4f4f9; 
 }
 
 #root {
@@ -554,17 +552,19 @@ body {
 /* src/App.css */
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
+  
+  /* font-family: Arial, sans-serif; */
+  /* margin: 0; */
   padding: 20px;
-  background-color: #f9f9f9;
+  /* background-color: red; */
 }
 
 header {
-  background-color: #4CAF50;
-  color: white;
-  padding: 20px;
-  text-align: center;
+  
+  /* background-color: #4CAF50; */
+  /* color: white; */
+  /* padding: 20px; */
+  /* text-align: center; */
 }
 
 h1 {
@@ -870,4 +870,42 @@ h2 {
   border: 1px solid #c3e6cb;
   text-align: center;
   font-size: 1.1rem;
+}
+/* Styling for Upcoming Classes Section */
+.upcoming-classes {
+  background-color: #f9f9f9; /* Light background */
+  padding: 20px; /* Spacing */
+  border: 2px solid #3498db; /* Blue border */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center; /* Centered content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.upcoming-classes h3 {
+  font-size: 1.5em; /* Increase font size */
+  color: #2c3e50; /* Dark gray text */
+}
+
+.upcoming-classes .class-message {
+  margin-top: 20px; /* Space between title and message */
+  color: #7f8c8d; /* Gray text */
+}
+
+.upcoming-classes p {
+  font-size: 1.2em; /* Slightly larger text */
+}
+
+.schedule-btn {
+  background-color: #27ae60; /* Green button */
+  color: white; /* White text */
+  border: none; /* Remove borders */
+  padding: 10px 20px; /* Button padding */
+  font-size: 1em; /* Font size */
+  border-radius: 5px; /* Rounded button */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.schedule-btn:hover {
+  background-color: #229954; /* Darker green on hover */
 }
