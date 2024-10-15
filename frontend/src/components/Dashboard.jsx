@@ -340,8 +340,106 @@
 // };
 
 // export default Dashboard;
-/////////////////////////////////////////
+///////////////////////////////////////
 ///////try to add pending assignment
+// import React, { useState, useEffect } from 'react';
+// import { Link } from 'react-router-dom';
+// import '../App.css'; // Import your CSS for styling
+
+// const Dashboard = () => {
+//   const [enrolledCourses, setEnrolledCourses] = useState(0);
+//   const [completedQuizzes, setCompletedQuizzes] = useState(0);
+//   const [pendingAssignments, setPendingAssignments] = useState(0); // Updated state variable
+
+//   // Function to fetch the latest data from localStorage
+//   const fetchStudentData = () => {
+//     const courses = JSON.parse(localStorage.getItem('enrolledCourses')) || 0;
+//     const quizzes = JSON.parse(localStorage.getItem('completedQuizzes')) || 0;
+//     const assignments = JSON.parse(localStorage.getItem('pendingAssignments')) || 0; // Fetch pending assignments
+
+//     setEnrolledCourses(courses);
+//     setCompletedQuizzes(quizzes);
+//     setPendingAssignments(assignments); // Update pending assignments state
+//   };
+
+//   useEffect(() => {
+//     // Fetch data when the component mounts
+//     fetchStudentData();
+
+//     // Set up an event listener to listen for changes in localStorage
+//     const handleStorageChange = () => {
+//       fetchStudentData();
+//     };
+
+//     // Add event listener for storage change
+//     window.addEventListener('storage', handleStorageChange);
+
+//     return () => {
+//       // Clean up event listener when the component unmounts
+//       window.removeEventListener('storage', handleStorageChange);
+//     };
+//   }, []);
+
+//   // Function to complete an assignment
+//   const completeAssignment = () => {
+//     const currentAssignments = JSON.parse(localStorage.getItem('pendingAssignments')) || 0;
+//     if (currentAssignments > 0) {
+//       const updatedAssignments = currentAssignments - 1;
+//       localStorage.setItem('pendingAssignments', JSON.stringify(updatedAssignments));
+//       fetchStudentData(); // Fetch updated data after completion
+//     }
+//   };
+
+//   // Function to add an assignment
+//   const addAssignment = () => {
+//     const currentAssignments = JSON.parse(localStorage.getItem('pendingAssignments')) || 0;
+//     const updatedAssignments = currentAssignments + 1;
+//     localStorage.setItem('pendingAssignments', JSON.stringify(updatedAssignments));
+//     fetchStudentData(); // Fetch updated data after adding
+//   };
+
+//   return (
+//     <div className="dashboard-container">
+//       <h1>Student Dashboard</h1>
+//       <div className="dashboard-content">
+//         <section className="dashboard-summary">
+//           <h2>Summary</h2>
+//           <p>Welcome back! Here’s an overview of your current progress.</p>
+//           <ul>
+//             <li>Courses Enrolled: {enrolledCourses}</li>
+//             <li>Completed Quizzes: {completedQuizzes}</li>
+//             <li>Pending Assignments: {pendingAssignments}</li> {/* Updated option */}
+//           </ul>
+//           <button onClick={completeAssignment}>Complete Assignment</button>
+//           <button onClick={addAssignment}>Add Assignment</button>
+//         </section>
+
+//         <section className="dashboard-links">
+//           <h2>Quick Links</h2>
+//           <ul>
+//             <li><Link to="/courses">View Courses</Link></li>
+//             <li><Link to="/quiz">Take Quiz</Link></li>
+//             <li><Link to="/virtual-classroom">Join Virtual Classroom</Link></li>
+//           </ul>
+//         </section>
+
+//         <section className="dashboard-notifications">
+//           <h2>Notifications</h2>
+//           <p>You have 2 new messages.</p>
+//           <p>Your next class starts in 1 hour!</p>
+//         </section>
+
+//         {/* Link to go back to the home page */}
+//         <Link to="/" className="back-button">Back to Home</Link>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Dashboard;
+///////////
+/////the code above works so good 
+////try to add notify 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css'; // Import your CSS for styling
@@ -350,6 +448,15 @@ const Dashboard = () => {
   const [enrolledCourses, setEnrolledCourses] = useState(0);
   const [completedQuizzes, setCompletedQuizzes] = useState(0);
   const [pendingAssignments, setPendingAssignments] = useState(0); // Updated state variable
+
+  // State to manage notifications
+  const [notifications, setNotifications] = useState([
+    "You have 2 new messages.",
+    "Your next class starts in 1 hour!",
+  ]);
+
+  // State for custom notification input
+  const [customNotification, setCustomNotification] = useState('');
 
   // Function to fetch the latest data from localStorage
   const fetchStudentData = () => {
@@ -398,6 +505,17 @@ const Dashboard = () => {
     fetchStudentData(); // Fetch updated data after adding
   };
 
+  // Function to add a custom notification
+  const addCustomNotification = () => {
+    if (customNotification.trim()) {
+      setNotifications((prevNotifications) => [
+        ...prevNotifications,
+        customNotification,
+      ]);
+      setCustomNotification(''); // Clear input field
+    }
+  };
+
   return (
     <div className="dashboard-container">
       <h1>Student Dashboard</h1>
@@ -424,9 +542,23 @@ const Dashboard = () => {
         </section>
 
         <section className="dashboard-notifications">
-          <h2>Notifications</h2>
-          <p>You have 2 new messages.</p>
-          <p>Your next class starts in 1 hour!</p>
+          <h2>Comments</h2>
+      
+          {/* Render custom notifications */}
+          {notifications.slice(2).map((notification, index) => (
+            <p key={index + 2}>{notification}</p>
+          ))}
+          
+          {/* Input for custom notifications */}
+          <div className="notification-input">
+            <input
+              type="text"
+              value={customNotification}
+              onChange={(e) => setCustomNotification(e.target.value)}
+              placeholder="Write your notification here..."
+            />
+            <button onClick={addCustomNotification}>Add Comments</button>
+          </div>
         </section>
 
         {/* Link to go back to the home page */}

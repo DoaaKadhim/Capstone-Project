@@ -272,6 +272,7 @@ import VirtualClassroom from './components/VirtualClassroom';
 import Home from './components/Home';
 import QuizResult from './components/QuizResult';
 import VirtualClasses from './components/VirtualClasses';
+import LearningResources from './components/LearningResources'; // Import your new component
 
 
 import './App.css';
@@ -313,6 +314,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/course-detail/:courseId" element={<CourseDetail />} />
+          <Route path="/learning-resources" element={<LearningResources />} /> {/* Use element prop */}
 
         </Routes>
       </div>
