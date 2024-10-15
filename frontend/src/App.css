@@ -1,11 +1,12 @@
 
 /* General Styles */
 body {
-  /* background-image: url('img.jpg');  */
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-   background-color: #f4f4f9; 
+   /* background-color: #f4f4f9;  */
+    background-image: url('img.jpg'); 
+    padding: 20px;
 }
 
 #root {
@@ -38,12 +39,6 @@ body {
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
   }
 }
 
@@ -276,6 +271,13 @@ body {
   .dashboard-content {
     grid-template-columns: 1fr; /* Stack content in a single column on mobile */
   }
+
+  @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear;
+    }
+  }
+  
 
   .dashboard-header h1 {
     font-size: 2em;
@@ -534,24 +536,7 @@ body {
   list-style-type: disc;
   margin-left: 20px;
 }
-/* src/App.css */
 
-body {
-  background-image: url('img.jpg'); 
-
-  /* font-family: Arial, sans-serif; */
-  /* margin: 0; */
-  padding: 20px;
-  /* background-color: red; */
-}
-
-header {
-  
-  /* background-color: #4CAF50; */
-  /* color: white; */
-  /* padding: 20px; */
-  /* text-align: center; */
-}
 
 h1 {
   margin: 0;
