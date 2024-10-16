@@ -3,7 +3,7 @@
 
 ## Overview
 
-The **Student Dashboard Application** is a web-based interface designed to provide students with an overview of their academic progress. It includes information about enrolled courses, completed quizzes, pending assignments, and notifications. Users can navigate to different sections like viewing courses, taking quizzes, and joining virtual classrooms. The application interacts with `localStorage` to fetch and display student-specific data.
+The **Student Dashboard Application** is a web-based interface designed to provide students with an overview of their academic progress. It includes information about enrolled courses, completed quizzes, pending assignments, and comments. Users can navigate to different sections like viewing courses, taking quizzes, and joining virtual classrooms. The application interacts with `localStorage` to fetch and display student-specific data.
 
 ## Features
 
