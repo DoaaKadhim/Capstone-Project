@@ -24,7 +24,7 @@ a:hover {
 
 body {
 
-  /* background-image: url('img.jpg');  */
+  background-image: url('/img.jpg'); 
   display: flex;
   place-items: center;
   min-width: 320px;
