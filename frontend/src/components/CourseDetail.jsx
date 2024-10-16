@@ -119,8 +119,8 @@ const CourseDetail = () => {
 
   if (!course) return <p>Course not found.</p>;// Show error if no course is found
 
-  const handleEnroll = () => {
-    navigate(`/enroll/${course._id}`); // Navigate to EnrollPage
+  const handleEnroll = (id) => {
+    navigate(`/enroll/${id}`); // Navigate to EnrollPage
   };
 
   return (
@@ -128,7 +128,7 @@ const CourseDetail = () => {
     <h2>{course.title}</h2> {/* Show course title */}
     <p><strong>Syllabus:</strong> {course.syllabus}</p> {/* Show course syllabus */}
     <p><strong>Instructor:</strong> {course.instructor}</p> {/* Show course instructor */}
-    <button className="enroll-btn" onClick={handleEnroll}>Enroll</button> {/* Enroll button */}
+    <button className="enroll-btn" onClick={()=> handleEnroll(course.id)}>Enroll</button> {/* Enroll button */}
     <Link className="back-button" to="/courses">Back To All Courses</Link> {/* Link to courses list */}
     </div>
     

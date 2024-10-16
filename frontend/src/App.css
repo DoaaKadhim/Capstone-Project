@@ -110,25 +110,12 @@ body {
   color: #fff;
 }
 
-/* Logout Button Styles */
-.logout-button {
-  padding: 0.7rem 1.5rem;
-  background-color: #e74c3c;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 20px; /* Ensure there's space above the button */
-}
-
-.logout-button:hover {
+.logout-button.logout-button:hover {
   background-color: #c0392b;
 }
 
 /* Back Button Styles */
-.back-button ,.enroll-link {
+.back-button ,.enroll-link,.logout-button{
   display: block;
   margin: 20px auto;
   padding: 10px 15px;
@@ -156,27 +143,21 @@ body {
 }
 
 .dashboard-summary,
-.dashboard-links,
-.dashboard-notifications {
+.dashboard-links h2 {
   margin-bottom: 20px;
-}
-
-.dashboard-summary h2,
-.dashboard-links h2,
-.dashboard-notifications h2 {
   color: #333;
 }
 
-.dashboard-links ul,
-.dashboard-notifications ul {
+
+.dashboard-links ul{
   list-style-type: none;
   padding: 0;
 }
 
-.dashboard-links ul li,
-.dashboard-notifications p {
+.dashboard-links ul li{
   margin: 5px 0;
 }
+
 /* Header Section */
 .dashboard-header {
   background-color: #4a90e2; /* Light blue header background */

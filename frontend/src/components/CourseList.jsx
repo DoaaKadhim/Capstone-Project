@@ -40,14 +40,14 @@ const CourseList = () => {
       <h2>Available Courses</h2>
       <ul>
         {courses && courses.map((course, index) => (
-          <li key={`${course.id}-${index}`}>
+          <li key={`${course.id}`}>
             <Link to={`/courses/${course.id}`}>{course.name}
             </Link>
           </li>
 
         ))}
       </ul>
-     <Link className="back-button" to="/home">Back to Home</Link>
+     <Link className="back-button" to="/home">Go Back</Link>
 
     </div>
   );

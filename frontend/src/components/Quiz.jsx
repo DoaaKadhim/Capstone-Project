@@ -4,7 +4,7 @@
 
 
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Quiz = () => {
   const navigate = useNavigate();
@@ -150,7 +150,12 @@ const Quiz = () => {
           {isAnswered && <button onClick={nextQuestion}>Next Question</button>}
         </>
       )}
-      <Link to="/" className="back-button">Back to Home</Link>
+      {/* <Link to="/" className="back-button">Back to Home</Link> */}
+
+      <button className="back-button" onClick={() => navigate(-1)}>
+          Go Back
+        </button>
+
     </div>
   );
 };
