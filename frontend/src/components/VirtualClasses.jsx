@@ -141,8 +141,8 @@ const VirtualClasses = () => {
         </ul>
       )}
       {/* Use a button to navigate back */}
-      <button className="back-button" onClick={() => navigate(-1)}>
-        Go Back
+        <button className="back-button" onClick={() => navigate(-1)}>
+                 Go Back
       </button>
     </div>
   );
