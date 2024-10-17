@@ -9,7 +9,9 @@ The **Student Dashboard Application** is a web-based interface designed to provi
 
 - **Dashboard Summary**: Provides an overview of student progress including enrolled courses, completed quizzes, and pending assignments.
 - **Quick Links**: Access key student actions like viewing courses, taking quizzes, and joining virtual classrooms.
-- **Notifications**: Displays important updates such as new messages and upcoming classes or webinars.
+
+- **Comments**: Displays user comments that have been added, allowing users to view, add, and manage their comments in the dashboard. Users can also delete comments and the updates are persistent across page reloads.
+
 - **Persistent Data**: Uses `localStorage` to store and retrieve user data (courses, quizzes, assignments).
 
 ## Tech Stack
