@@ -2,21 +2,21 @@ import axios from 'axios';
 
 const API_URL = 'http://localhost:5000/api/auth'; // Adjust this URL to match your backend
 
-// Register a new user
-const register = async (userData) => {
-  try {
-    const response = await axios.post(`${API_URL}/register`, userData);
+// // Register a new user
+// const register = async (userData) => {
+//   try {
+//     const response = await axios.post(`${API_URL}/register`, userData);
     
-    if (response.data) {
-      // Store the JWT token or user data in localStorage (optional)
-      localStorage.setItem('user', JSON.stringify(response.data));
-    }
+//     if (response.data) {
+//       // Store the JWT token or user data in localStorage (optional)
+//       localStorage.setItem('user', JSON.stringify(response.data));
+//     }
 
-    return response.data;
-  } catch (error) {
-    throw new Error(error.response.data.message || 'Registration failed');
-  }
-};
+//     return response.data;
+//   } catch (error) {
+//     throw new Error(error.response.data.message || 'Registration failed');
+//   }
+// };
 
 // Log in a user
 const login = async (userData) => {
