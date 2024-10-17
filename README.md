@@ -15,23 +15,17 @@ The **Student Dashboard Application** is a web-based interface designed to provi
 - **Persistent Data**: Uses `localStorage` to store and retrieve user data (courses, quizzes, assignments).
 
 ## Tech Stack
+### Tech Stack Used
 
-- **React**: Frontend framework used to build the UI components.
-- **React Router**: For handling routing and navigation within the app.
-- **CSS**: For styling the UI elements.
-- **Axios**: (Optional) For API calls to external services (if integrated).
-- **localStorage**: For managing and persisting student data across sessions.
-- **Bootstrap**: For responsive and pre-styled components in the UI.
-- **JavaScript ES6**: Used for modern JavaScript features including Promises, async/await, and arrow functions.
-- **Node.js**: JavaScript runtime environment (for development).
-- **npm**: Node package manager used for handling project dependencies.
-- **Vite**: Fast development server and build tool for optimized React development.
-- **JavaScript ES6**: Modern JavaScript features like async/await and arrow functions.
-- **Node.js**: If you're using Node.js for development and running the server.
-- **npm**: Since you're using `npm run dev`, npm is used for package management.
-- **Vite**: Since you're using `npm run dev`, it's common that you're using a build tool like Vite for fast development and build optimization.
+- **React**: Built the user interface using reusable components.
+- **React Router**: Managed in-app routing and navigation efficiently.
+- **CSS**: Styled the UI elements for a clean, responsive design.
+- **Axios**: Handled API requests and communication with external services.
+- **localStorage**: Used for persisting user data across browser sessions.
+- **Bootstrap**: Provided responsive design and pre-built UI components.
+- **JavaScript (ES6)**: Leveraged modern JS features like Promises, async/await, and arrow functions.
+- **Node.js**: JavaScript runtime for backend services (if applicable in development).
+- **npm**: Managed project dependencies and scripts for the development workflow.
+- **Vite**: A fast development server and build tool for optimizing React development.
 
-
-
-
-
+All development was done using **VSCode** for code editing, debugging, and project management.
